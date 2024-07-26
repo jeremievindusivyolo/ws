@@ -1,12 +1,3 @@
-const express = require('express')
-
-
-const webserver = express()
- .use((req, res) =>
-   res.sendFile('/ws-client.html', { root: __dirname })
- )
- .listen(3100, () => console.log(`Listening on ${3000}`))
-
 const { WebSocketServer } = require('ws')
 const sockserver = new WebSocketServer({ port: 2048 })
 
